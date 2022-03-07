@@ -1,7 +1,20 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7226186&assignment_repo_type=AssignmentRepo)
+
 # Welcome to GitHub
 
 캡스톤 팀 생성을 축하합니다.
+
+
+### TODO:
+1. 프로젝트 소개 (국문)
+2. Abstract (영문)
+3. 소개영상 (Youtube, 스크린샷 모음, 시연영상 등, 추가링크 포함)
+4.팀소개
+  – 팀원 이름, 대표 사진(옵션), 역할
+  – 학번 뒤 4자리 : ****0000 과 같이 작성
+5.사용법(소프트웨어설치,실행방법,사용방법등추가링크로포함)
+6. 기타 ( 1~5 외 전하고 싶은 내용, 사사 등 )
+
 
 ## 팀소개 및 페이지를 꾸며주세요.
 
@@ -76,14 +89,3 @@ Syntax highlighted code block
 
 readme 파일 생성에 추가적인 도움이 필요하면 [도움말](https://help.github.com/articles/about-readmes/) 이나 [contact support](https://github.com/contact) 을 이용하세요.
 
----
-
-### TODO:
-1. 프로젝트 소개 (국문)
-2. Abstract (영문)
-3. 소개영상 (Youtube, 스크린샷 모음, 시연영상 등, 추가링크 포함)
-4.팀소개
-  – 팀원 이름, 대표 사진(옵션), 역할
-  – 학번 뒤 4자리 : ****0000 과 같이 작성
-5.사용법(소프트웨어설치,실행방법,사용방법등추가링크로포함)
-6. 기타 ( 1~5 외 전하고 싶은 내용, 사사 등 )
