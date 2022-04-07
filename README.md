@@ -38,8 +38,8 @@ The main purpose of this project is to study the diff algorithm, which is the ba
 
 - 두 바이너리 파일 Diff 결과 (CODE 영역 .text section 중 일부)
 
-![Untitled](Binary%20Dif%202bf29/Untitled.png)
+![demo-code](https://user-images.githubusercontent.com/26249582/162144936-2853c0fa-5c3f-4ce8-94c6-8d26242f1351.png)
 
 - 두 바이너리 파일 Diff 결과 (DATA 영역)
 
-![Untitled](Binary%20Dif%202bf29/Untitled%201.png)
+![demo-data](https://user-images.githubusercontent.com/26249582/162144950-f762ed5d-9f7f-48e3-a2f3-29e5b7f8f57b.png)
