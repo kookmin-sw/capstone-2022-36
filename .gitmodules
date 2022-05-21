@@ -5,5 +5,5 @@
 [submodule "binary-gleaner"]
     path = binary-gleaner
     url = https://github.com/topcue/binary-gleaner
-    branch = main
-    update = rebase
+	branch = main
+	update = rebase
