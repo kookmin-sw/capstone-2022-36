@@ -2,8 +2,3 @@
 	path = B2R2
     url = https://github.com/topcue/B2R2
     branch = master
-[submodule "binary-gleaner"]
-	path = binary-gleaner
-    url = https://github.com/topcue/binary-gleaner
-    branch = main
-	update = rebase
