@@ -50,7 +50,7 @@ The main purpose of this project is to study the diff algorithm, which is the ba
 
 .[NET Core SDK 6.0 버전](https://dotnet.microsoft.com/en-us/download/dotnet)을 설치해야 합니다.
 
-## 5. Example
+## 5. Usage
 
 - capstone-2022-36 repo를 clone한 뒤, submodule을 업데이트합니다.
 
