@@ -1,10 +1,12 @@
-# Binary Diff 연구 및 개발
+# Binary Diff 및 Dataset 수집 도구 구현
 
 [2022년 국민대학교 소프트웨어학부 캡스톤디자인 산학자유분반 36팀]
 
+---
+
 ## 1. 프로젝트 소개
 
-본 프로젝트는 binary diff 도구를 개발하여 바이너리 분석 플랫폼인 B2R2에 탑재하고, binary diff 관련 연구를 수행하는 것을 목표로 하고 있습니다.
+본 프로젝트는 binary diff 도구 B2R2-BinDiff를 구현하여 오픈 소스 바이너리 분석 플랫폼인 B2R2에 탑재하고, Binary Diff를 위한 Dataset을 수집하는 도구를 구현합니다.
 
 바이너리 분석은 소프트웨어 보안을 실현하기 위해 필수적인 요소입니다. 이는 단순히 소스코드가 없을 때 취약점 분석을 위해 기존 소스코드를 유추하는 기술을 의미하는 것만은 아닙니다. 오히려 소스코드 보유 여부와 상관없이 수행해야 하고, 심지어 완전한 소스코드를 보유하더라도 바이너리의 정보를 획득하기 위해 바이너리 분석은 필수적입니다.
 
@@ -14,7 +16,7 @@
 
 ## 2. Abstract
 
-In this project, we develop a binary diff tool, mount it on B2R2, a binary analysis platform, and conduct research on binary diff.
+In this project we implements the binary diff tool B2R2-BinDiff, mounts it on B2R2, an open source binary analysis platform, and implements a tool to collect datasets for binary diff.
 
 Binary analysis is essential to realizing software security. This does not simply mean the technology of inferring the existing source code for vulnerability analysis when there is no source code. Rather, it has to be performed regardless of whether you have the source code or not, and even if you have the complete source code, binary analysis is essential to obtain binary information.
 
@@ -26,20 +28,71 @@ The main purpose of this project is to study the diff algorithm, which is the ba
 
 ```
 윤형준(학부생) ****2235
- 논문 조사 및 발표, 연구, 개발, 프로젝트 일정 및 산출물 관리
+  논문 조사 및 발표, 개발, 연구, 프로젝트 일정 및 산출물 관리
 
-차상길(멘토)
+차상길(산학 멘토)
   논문 추천, 연구 방향성 제시, 코드 리뷰, 매주 온라인 미팅 및 피드백
 ```
 
 산학분반 자유주제 팀으로 학부생 단독 팀입니다.
 
-## 4. Demo
+## 4. ****Dependencies****
+
+### 4.1 Ubuntu Linux
+
+본 프로젝트는 Ubuntu Linux에서 테스트되었습니다.
+
+### 4.2 .NET Core SDK
+
+본 프로젝트의 `B2R2-BinDiff`는 `B2R2 0.5.0`(‣)에 탑재됩니다.
+
+따라서 B2R2 0.5.0을 구동하기 위한 환경이 필요합니다.
+
+.[NET Core SDK 6.0 버전](https://dotnet.microsoft.com/en-us/download/dotnet)을 설치해야 합니다.
+
+## 5. Example
+
+- capstone-2022-36 repo를 clone한 뒤, submodule을 업데이트합니다.
+
+```bash
+git clone https://github.com/kookmin-sw/capstone-2022-36
+cd capstone-2022-36
+
+git submodule init
+git submodule update
+
+cd B2R2 && git checkout master
+cd ../binary-gleaner && git checkout main && cd ..
+```
+
+- B2R2를 build합니다.
+
+```bash
+$ cd capstone-2022-36/B2R2
+$ dotnet build
+```
+
+- B2R2-BinDiff example
+
+```bash
+$ cd capstone-2022-36/B2R2/src/RearEnd/BinDump/
+$ dotnet run -- capstone-2022-36/samples/a.out capstone-2022-36/samples/b.out --diff --show-color --histogram
+```
+
+- Binary-gleaner example
+
+```bash
+## tested on Linux
+$ cd capstone-2022-36/binary-gleaner
+python3 main.py
+```
+
+## 6. Demo
 
 - 두 바이너리 파일 Diff 결과 (CODE 영역 .text section 중 일부)
 
-![demo-code](https://user-images.githubusercontent.com/26249582/162144936-2853c0fa-5c3f-4ce8-94c6-8d26242f1351.png)
+![code.png](Binary%20Diff%20%E1%84%86%E1%85%B5%E1%86%BE%20Dataset%20%E1%84%89%E1%85%AE%E1%84%8C%E1%85%B5%E1%86%B8%20%E1%84%83%E1%85%A9%E1%84%80%E1%85%AE%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20ceb9278f7e4c46d7882ebb7155e61f7b/code.png)
 
 - 두 바이너리 파일 Diff 결과 (DATA 영역)
 
-![demo-data](https://user-images.githubusercontent.com/26249582/162144950-f762ed5d-9f7f-48e3-a2f3-29e5b7f8f57b.png)
+![Untitled](Binary%20Diff%20%E1%84%86%E1%85%B5%E1%86%BE%20Dataset%20%E1%84%89%E1%85%AE%E1%84%8C%E1%85%B5%E1%86%B8%20%E1%84%83%E1%85%A9%E1%84%80%E1%85%AE%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20ceb9278f7e4c46d7882ebb7155e61f7b/Untitled.png)
