@@ -44,7 +44,7 @@ The main purpose of this project is to study the diff algorithm, which is the ba
 
 ### 4.2 .NET Core SDK
 
-본 프로젝트의 `B2R2-BinDiff`는 `B2R2 0.5.0`(‣)에 탑재됩니다.
+본 프로젝트의 `B2R2-BinDiff`는 [B2R2 0.5.0](https://github.com/topcue/B2R2/tree/master)에 탑재됩니다.
 
 따라서 B2R2 0.5.0을 구동하기 위한 환경이 필요합니다.
 
