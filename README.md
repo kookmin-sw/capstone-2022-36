@@ -91,8 +91,8 @@ python3 main.py
 
 - 두 바이너리 파일 Diff 결과 (CODE 영역 .text section 중 일부)
 
-![code.png](Binary%20Diff%20%E1%84%86%E1%85%B5%E1%86%BE%20Dataset%20%E1%84%89%E1%85%AE%E1%84%8C%E1%85%B5%E1%86%B8%20%E1%84%83%E1%85%A9%E1%84%80%E1%85%AE%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20ceb9278f7e4c46d7882ebb7155e61f7b/code.png)
+![code.png]![1_code](https://user-images.githubusercontent.com/26249582/169651554-10f5423a-d72f-486e-a718-73c0fefc86d5.png)
 
 - 두 바이너리 파일 Diff 결과 (DATA 영역)
 
-![Untitled](Binary%20Diff%20%E1%84%86%E1%85%B5%E1%86%BE%20Dataset%20%E1%84%89%E1%85%AE%E1%84%8C%E1%85%B5%E1%86%B8%20%E1%84%83%E1%85%A9%E1%84%80%E1%85%AE%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20ceb9278f7e4c46d7882ebb7155e61f7b/Untitled.png)
+![Untitled]![1_data](https://user-images.githubusercontent.com/26249582/169651555-26cf0968-3d83-4089-b58a-0abdf873d39d.png)
