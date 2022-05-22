@@ -79,7 +79,7 @@ $ cd capstone-2022-36/B2R2/src/RearEnd/BinDump/
 $ dotnet run -- capstone-2022-36/samples/a.out capstone-2022-36/samples/b.out --diff --show-color --histogram
 ```
 
-- Binary-gleaner example
+- Binary-Gleaner example
 
 ```bash
 ## tested on Linux
