@@ -14,6 +14,6 @@ foo() {
 
 
 foo "cat samples/paths.txt"
-foo "dotnet run --no-build --project ~/capstone-2022-36/B2R2/src/RearEnd/BinDump -- samples/paths.txt --multiple"
+foo "dotnet run --no-build --project B2R2/src/RearEnd/BinDump -- samples/paths.txt --multiple"
 
 # EOF

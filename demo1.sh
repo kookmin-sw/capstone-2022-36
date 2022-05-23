@@ -16,6 +16,6 @@ foo() {
 alias cat=bat
 foo "cat samples/java_v1.java"
 foo "cat samples/java_v2.java"
-foo "dotnet run --no-build --project ~/capstone-2022-36/B2R2/src/RearEnd/BinDump -- samples/java_v1.java samples/java_v2.java --diff --text --show-color"
+foo "dotnet run --no-build --project B2R2/src/RearEnd/BinDump -- samples/java_v1.java samples/java_v2.java --diff --text --show-color"
 
 # EOF
