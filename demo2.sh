@@ -17,6 +17,4 @@ foo "file samples/a.out"
 foo "file samples/b.out"
 foo "dotnet run --no-build --project ~/capstone-2022-36/B2R2/src/RearEnd/BinDump -- samples/a.out samples/b.out --diff --show-color --myers"
 
-
-
 # EOF

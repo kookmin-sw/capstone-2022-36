@@ -17,6 +17,4 @@ foo "file samples/tree-2.0.1"
 foo "file samples/tree-2.0.2"
 foo "dotnet run --no-build --project ~/capstone-2022-36/B2R2/src/RearEnd/BinDump -- samples/tree-2.0.1 samples/tree-2.0.2 --diff"
 
-
-
 # EOF
