@@ -1,0 +1,3 @@
+samples/a.out samples/b.out
+samples/tree-2.0.1 samples/tree-2.0.2
+samples/elfedit-v1 samples/elfedit-v2
