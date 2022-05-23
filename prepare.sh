@@ -12,8 +12,12 @@ foo() {
   eval ${arg}
 }
 
+if ! command -v bat &> /dev/null
+then
+    echo "bat could not be found"
+    alias bat=cat
+fi
 
-alias cat=bat
 foo "export WORKSPACE=`pwd`"
 foo "echo $WORKSPACE"
 

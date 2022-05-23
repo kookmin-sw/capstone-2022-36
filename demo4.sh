@@ -12,6 +12,11 @@ foo() {
   eval ${arg}
 }
 
+if ! command -v bat &> /dev/null
+then
+    echo "bat could not be found"
+    alias bat=cat
+fi
 
 foo "file samples/tree-2.0.1"
 foo "file samples/tree-2.0.2"

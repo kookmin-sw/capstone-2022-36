@@ -12,10 +12,14 @@ foo() {
   eval ${arg}
 }
 
+if ! command -v bat &> /dev/null
+then
+    echo "bat could not be found"
+    alias bat=cat
+fi
 
-alias cat=bat
-foo "cat samples/java_v1.java"
-foo "cat samples/java_v2.java"
-foo "dotnet run --no-build --project B2R2/src/RearEnd/BinDump -- samples/java_v1.java samples/java_v2.java --diff --text --show-color"
+foo "bat samples/java_v1.java"
+foo "bat samples/java_v2.java"
+foo "dotnet run --project B2R2/src/RearEnd/BinDump -- samples/java_v1.java samples/java_v2.java --diff --text --show-color"
 
 # EOF

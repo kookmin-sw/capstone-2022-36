@@ -12,8 +12,13 @@ foo() {
   eval ${arg}
 }
 
+if ! command -v bat &> /dev/null
+then
+    echo "bat could not be found"
+    alias bat=cat
+fi
 
-foo "cat samples/paths.txt"
+foo "bat samples/paths.txt"
 foo "dotnet run --no-build --project B2R2/src/RearEnd/BinDump -- samples/paths.txt --multiple"
 
 # EOF
