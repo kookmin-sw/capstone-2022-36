@@ -60,7 +60,7 @@ wget https://dot.net/v1/dotnet-install.sh
 ./dotnet-install.sh -c 6.0
 ```
 
-## 5. Usage
+## 5. Usage & Example
 
 - 편의를 위해 작업 공간을 등록합니다.
 
