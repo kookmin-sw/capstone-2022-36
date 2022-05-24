@@ -36,11 +36,13 @@ The main purpose of this project is to study the diff algorithm, which is the ba
 
 산학분반 자유주제 팀으로 학부생 단독 팀입니다.
 
-## 4. ****Dependencies****
+## 4. Dependencies
 
 ### 4.1 Ubuntu Linux
 
-본 프로젝트는 Ubuntu Linux에서 테스트되었습니다.
+본 프로젝트는 `Ubuntu Linux 20.04.2 LTS (x64)`에서 테스트되었습니다.
+
+B2R2-BinDiff는 .NET SDK에 의존하기 때문에 운영체제에 상관없이 동작 가능하나, Binary-Gleaner는 Python3와 Unix의 shell script들로 구성되어 있습니다.
 
 ### 4.2 .NET Core SDK
 
@@ -48,51 +50,68 @@ The main purpose of this project is to study the diff algorithm, which is the ba
 
 따라서 B2R2 0.5.0을 구동하기 위한 환경이 필요합니다.
 
-.[NET Core SDK 6.0 버전](https://dotnet.microsoft.com/en-us/download/dotnet)을 설치해야 합니다.
+.[NET Core SDK 5.0버전과 6.0 버전](https://dotnet.microsoft.com/en-us/download/dotnet)을 설치해야 합니다.
+
+- Install .NET
+
+```bash
+wget https://dot.net/v1/dotnet-install.sh
+./dotnet-install.sh -c 5.0
+./dotnet-install.sh -c 6.0
+```
 
 ## 5. Usage
+
+- 편의를 위해 작업 공간을 등록합니다.
+
+```bash
+# mkdir demo && cd demo
+export WORKSPACE=`pwd`
+echo $WORKSPACE
+```
 
 - capstone-2022-36 repo를 clone한 뒤, submodule을 업데이트합니다.
 
 ```bash
-git clone https://github.com/kookmin-sw/capstone-2022-36
-cd capstone-2022-36
-
+cd $WORKSPACE
+git clone https://github.com/kookmin-sw/capstone-2022-36 && cd $WORKSPACE/capstone-2022-36
 git submodule init
 git submodule update
 
-cd B2R2 && git checkout master
-cd ../binary-gleaner && git checkout main && cd ..
+cd $WORKSPACE/capstone-2022-36/B2R2 && git checkout master
+cd $WORKSPACE/capstone-2022-36/binary-gleaner && git checkout main
+cd $WORKSPACE/capstone-2022-36
 ```
 
 - B2R2를 build합니다.
 
 ```bash
-$ cd capstone-2022-36/B2R2
-$ dotnet build
+dotnet build $WORKSPACE/capstone-2022-36/B2R2
 ```
 
 - B2R2-BinDiff example
 
 ```bash
-$ cd capstone-2022-36/B2R2/src/RearEnd/BinDump/
-$ dotnet run -- capstone-2022-36/samples/a.out capstone-2022-36/samples/b.out --diff --show-color --histogram
+$WORKSPACE/capstone-2022-36/demo1.sh
+$WORKSPACE/capstone-2022-36/demo2.sh
+$WORKSPACE/capstone-2022-36/demo3.sh
+$WORKSPACE/capstone-2022-36/demo5.sh
+$WORKSPACE/capstone-2022-36/demo6.sh
 ```
 
 - Binary-Gleaner example
 
 ```bash
-## tested on Linux
-$ cd capstone-2022-36/binary-gleaner
-python3 main.py
+cd $WORKSPACE/capstone-2022-36/binary-gleaner
+python main.py
 ```
 
 ## 6. Demo
 
 - 두 바이너리 파일 Diff 결과 (CODE 영역 .text section 중 일부)
 
-![1_code](https://user-images.githubusercontent.com/26249582/169651554-10f5423a-d72f-486e-a718-73c0fefc86d5.png)
+![https://user-images.githubusercontent.com/26249582/169651554-10f5423a-d72f-486e-a718-73c0fefc86d5.png](https://user-images.githubusercontent.com/26249582/169651554-10f5423a-d72f-486e-a718-73c0fefc86d5.png)
 
 - 두 바이너리 파일 Diff 결과 (DATA 영역)
 
-![1_data](https://user-images.githubusercontent.com/26249582/169651555-26cf0968-3d83-4089-b58a-0abdf873d39d.png)
+![https://user-images.githubusercontent.com/26249582/169651555-26cf0968-3d83-4089-b58a-0abdf873d39d.png](https://user-images.githubusercontent.com/26249582/169651555-26cf0968-3d83-4089-b58a-0abdf873d39d.png)
